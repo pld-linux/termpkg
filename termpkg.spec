@@ -5,10 +5,6 @@ Version:	3.1
 Release:	1
 License:	GPL
 Group:		Networking
-Group(de):	Netzwerkwesen
-Group(es):	Red
-Group(pl):	Sieciowe
-Group(pt_BR):	Rede
 Source0:	ftp://ftp.croftj.net/usr/termpkg/%{name}-%{version}.tar.gz
 Patch0:		%{name}-glibc.patch
 URL:		http://www.croftj.net/~termpkg/
