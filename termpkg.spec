@@ -1,7 +1,7 @@
 Summary:	Terminal server daemon and simple telnet-like client
 Summary(pl):	Serwer terminalowy i klient podobny do telneta
 Name:		termpkg
-Version:	3.1
+Version:	3.2
 Release:	1
 License:	GPL
 Group:		Networking
@@ -42,14 +42,12 @@ install linux/bin/* $RPM_BUILD_ROOT%{_bindir}
 install doc/*.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install termnetd/termnetd.conf $RPM_BUILD_ROOT%{_sysconfdir}
 
-gzip -9nf CHANGES README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/termnetd.conf
