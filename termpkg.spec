@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Networking
 Source0:	ftp://ftp.croftj.net/usr/termpkg/%{name}-%{version}.tar.gz
+# Source0-md5:	b4ae66f28aab30d509765410f77c1672
 Patch0:		%{name}-glibc.patch
 URL:		http://www.croftj.net/~termpkg/
 BuildRequires:	flex
