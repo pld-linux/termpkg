@@ -1,0 +1,24 @@
+--- termpkg-3.1/libtn/SocketIO.c.orig	Sat Jan  8 19:20:55 2000
++++ termpkg-3.1/libtn/SocketIO.c	Wed Sep  5 14:22:46 2001
+@@ -25,6 +25,7 @@
+ #endif
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++#include <arpa/inet.h>
+ #include <fcntl.h>
+ #include <string.h>
+ #include <stdlib.h>
+@@ -47,13 +48,6 @@
+ 
+ int tn_errno = 0;
+ 
+-#if !defined(AIX)
+-#if !defined(FreeBSD)
+-u_short htons();
+-#endif
+-u_short inet_addr();
+-#endif
+-
+ static void timerExpired(int sig)
+ {
+    sig = 0;
