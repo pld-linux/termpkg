@@ -1,12 +1,12 @@
 Summary:	Terminal server daemon and simple telnet-like client
 Summary(pl):	Serwer terminalowy i klient podobny do telneta
 Name:		termpkg
-Version:	3.2
-Release:	2
-License:	GPL
+Version:	3.3
+Release:	1
+License:	GPL v1+
 Group:		Networking
 Source0:	ftp://ftp.croftj.net/usr/termpkg/%{name}-%{version}.tar.gz
-# Source0-md5:	b4ae66f28aab30d509765410f77c1672
+# Source0-md5:	cf773eb9cc3cbbf57cb0d3c39287370f
 Patch0:		%{name}-glibc.patch
 URL:		http://www.croftj.net/~termpkg/
 BuildRequires:	flex
