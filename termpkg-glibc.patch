@@ -22,3 +22,15 @@
  static void timerExpired(int sig)
  {
     sig = 0;
+diff -uNr termpkg-3.2.orig/termnetd/tndCfgParser.c termpkg-3.2/termnetd/tndCfgParser.c
+--- termpkg-3.2.orig/termnetd/tndCfgParser.c	Sat Feb  3 16:04:14 2001
++++ termpkg-3.2/termnetd/tndCfgParser.c	Sun Aug 25 16:42:41 2002
+@@ -82,7 +82,7 @@
+ int xlate_cflag[] =
+ {
+    CS5, CS6, CS7, CS8, CSTOPB, PARENB, PARODD, HUPCL, CLOCAL,
+-#if !defined(FreeBSD) && !defined(SCO) && !defined(AIX) && !defined(OSF)
++#if !defined(FreeBSD) && !defined(SCO) && !defined(AIX) && !defined(OSF) && !(defined(LINUX) && defined(__powerpc__))
+    CIBAUD, CRTSCTS,
+ #else
+    0, 0,
