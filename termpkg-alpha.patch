@@ -1,0 +1,11 @@
+--- termpkg-3.3/termnetd/tndCfgParser.c.orig	2004-04-08 19:37:23.000000000 +0000
++++ termpkg-3.3/termnetd/tndCfgParser.c	2004-04-08 19:37:47.000000000 +0000
+@@ -82,7 +82,7 @@
+ int xlate_cflag[] =
+ {
+    CS5, CS6, CS7, CS8, CSTOPB, PARENB, PARODD, HUPCL, CLOCAL,
+-#if !defined(FreeBSD) && !defined(SCO) && !defined(AIX) && !defined(OSF) && !(defined(LINUX) && defined(__powerpc__))
++#if !defined(FreeBSD) && !defined(SCO) && !defined(AIX) && !defined(OSF) && !(defined(LINUX) && (defined(__powerpc__) || defined(__alpha__)))
+    CIBAUD, CRTSCTS,
+ #else
+    0, 0,
