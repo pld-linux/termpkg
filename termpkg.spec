@@ -2,12 +2,13 @@ Summary:	Terminal server daemon and simple telnet-like client
 Summary(pl):	Serwer terminalowy i klient podobny do telneta
 Name:		termpkg
 Version:	3.3
-Release:	1
+Release:	2
 License:	GPL v1+
 Group:		Networking
 Source0:	ftp://ftp.croftj.net/usr/termpkg/%{name}-%{version}.tar.gz
 # Source0-md5:	cf773eb9cc3cbbf57cb0d3c39287370f
 Patch0:		%{name}-glibc.patch
+Patch1:		%{name}-alpha.patch
 URL:		http://www.croftj.net/~termpkg/
 BuildRequires:	flex
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -28,12 +29,15 @@ telnet s³u¿y wielu portom szeregowym.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 ./configure
 cd linux
-%{__make} CC="%{__cc}" CFLAGS="%{rpmcflags} -DLINUX -I../libtn"
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -DLINUX -I../libtn"
 
 %install
 rm -rf $RPM_BUILD_ROOT
