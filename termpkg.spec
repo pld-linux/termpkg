@@ -34,8 +34,7 @@ telnet s³u¿y wielu portom szeregowym.
 
 %build
 ./configure
-cd linux
-%{__make} \
+%{__make} -C linux \
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -DLINUX -I../libtn"
 
