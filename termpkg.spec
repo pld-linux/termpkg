@@ -55,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/termnetd.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/termnetd.conf
