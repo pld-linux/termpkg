@@ -1,5 +1,5 @@
 Summary:	Terminal server daemon and simple telnet-like client
-Summary(pl):	Serwer terminalowy i klient podobny do telneta
+Summary(pl.UTF-8):   Serwer terminalowy i klient podobny do telneta
 Name:		termpkg
 Version:	3.3
 Release:	2
@@ -20,12 +20,12 @@ configured to connect in a one to one relation of telnet ports to
 serial ports or in a round-robin fashion where one telnet port serves
 many serial ports.
 
-%description -l pl
+%description -l pl.UTF-8
 Serwer terminalowy i prosty klient podobny do telneta. Pakiet pozwala
-na dostêp do jednego lub wiêcej portów szeregowych poprzez protokó³
-telnet. Mo¿e byæ skonfigurowany do ³±czenia portów szeregowych i
+na dostÄ™p do jednego lub wiÄ™cej portÃ³w szeregowych poprzez protokÃ³Å‚
+telnet. MoÅ¼e byÄ‡ skonfigurowany do Å‚Ä…czenia portÃ³w szeregowych i
 telnet jeden do jednego lub w stylu round-robin, gdzie jeden port
-telnet s³u¿y wielu portom szeregowym.
+telnet sÅ‚uÅ¼y wielu portom szeregowym.
 
 %prep
 %setup -q
