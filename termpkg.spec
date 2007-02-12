@@ -1,5 +1,5 @@
 Summary:	Terminal server daemon and simple telnet-like client
-Summary(pl.UTF-8):   Serwer terminalowy i klient podobny do telneta
+Summary(pl.UTF-8):	Serwer terminalowy i klient podobny do telneta
 Name:		termpkg
 Version:	3.3
 Release:	2
